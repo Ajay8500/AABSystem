@@ -80,9 +80,6 @@ namespace AABFrontOffice
 
         }
 
-
-
-
         [WebMethod]
         public string GetAllStaff()
         {
@@ -431,10 +428,6 @@ namespace AABFrontOffice
 
             return boo;
         }
-
-
-
-
 
         [WebMethod]
         public string GetStaffById(int EmpId)
