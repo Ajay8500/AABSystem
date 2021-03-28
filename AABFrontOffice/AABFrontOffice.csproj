@@ -1895,6 +1895,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\Site.css" />
     <Content Include="CustomerList.aspx" />
+    <Content Include="EmployeeList.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
@@ -2143,6 +2144,12 @@
     </Compile>
     <Compile Include="CustomerList.aspx.designer.cs">
       <DependentUpon>CustomerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeList.aspx.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeList.aspx.designer.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
