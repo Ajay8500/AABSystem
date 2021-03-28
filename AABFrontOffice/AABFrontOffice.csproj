@@ -140,6 +140,7 @@
   <ItemGroup>
     <Content Include="AABCarService.asmx" />
     <Content Include="AddCar.aspx" />
+    <Content Include="AddorUpdateEmp.aspx" />
     <Content Include="Assets\css\all.css" />
     <Content Include="Assets\css\bootstrap-theme.css" />
     <Content Include="Assets\css\bootstrap-theme.min.css" />
@@ -2111,6 +2112,12 @@
     </Compile>
     <Compile Include="AddCar.aspx.designer.cs">
       <DependentUpon>AddCar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddorUpdateEmp.aspx.cs">
+      <DependentUpon>AddorUpdateEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddorUpdateEmp.aspx.designer.cs">
+      <DependentUpon>AddorUpdateEmp.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
