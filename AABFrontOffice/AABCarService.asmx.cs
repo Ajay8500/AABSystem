@@ -13,23 +13,21 @@ using Ubiety.Dns.Core;
 namespace AABFrontOffice
 {
     /// <summary>
-    /// Summary description for AabCarService
+    /// Summary description for AABCarService
     /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     // [System.Web.Script.Services.ScriptService]
-    public class AabCarService : System.Web.Services.WebService
+    public class AABCarService : System.Web.Services.WebService
     {
-        public static string cs = ConfigurationManager.ConnectionStrings["AabCars"].ConnectionString;
+
         [WebMethod]
         public string HelloWorld()
         {
             return "Hello World";
         }
-
-
 
         [WebMethod(EnableSession = true)]
         public string AddOrUpdateEmp(
@@ -79,6 +77,9 @@ namespace AABFrontOffice
             return JsonConvert.SerializeObject(new { statusCode = statusCode, message = responseMsg, userMessage = message });
 
         }
+
+
+
 
         [WebMethod]
         public string GetAllStaff()
@@ -448,6 +449,7 @@ namespace AABFrontOffice
             return JSONString;
 
         }
-
     }
+}
+
 }
