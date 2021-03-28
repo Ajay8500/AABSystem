@@ -93,8 +93,8 @@
     <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.23\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Renci.SshNet, Version=2020.0.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <HintPath>..\packages\SSH.NET.2020.0.0\lib\net40\Renci.SshNet.dll</HintPath>
@@ -142,6 +142,11 @@
     <Content Include="About.aspx" />
     <Content Include="AddCar.aspx" />
     <Content Include="AddorUpdateEmp.aspx" />
+    <Content Include="App_Data\AabCars Script.sql" />
+    <Content Include="App_Data\AabCars.mdf" />
+    <Content Include="App_Data\AabCars_log.ldf">
+      <DependentUpon>AabCars.mdf</DependentUpon>
+    </Content>
     <Content Include="Assets\css\all.css" />
     <Content Include="Assets\css\bootstrap-theme.css" />
     <Content Include="Assets\css\bootstrap-theme.min.css" />
@@ -2103,7 +2108,13 @@
     <Content Include="StaffOrders.aspx" />
     <Content Include="UserOrders.aspx" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AABCarService.asmx.cs">
@@ -2231,19 +2242,11 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Site.Mobile.Master" />
     <Content Include="Site.Master" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

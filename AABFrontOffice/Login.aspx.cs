@@ -1,5 +1,4 @@
-﻿
-using AABFrontOffice.Classes;
+﻿using AABFrontOffice.Classes;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
