@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Optimization;
 using System.Web.UI;
 
-namespace AABFrontOffice
+namespace AabCars
 {
     public class BundleConfig
     {

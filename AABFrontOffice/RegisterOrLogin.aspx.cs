@@ -8,7 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using AABFrontOffice.Classes;
 
-namespace AABFrontOffice
+namespace AabCars
 {
     public partial class RegisterOrLogin : System.Web.UI.Page
     {

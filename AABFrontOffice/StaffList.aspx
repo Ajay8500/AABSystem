@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StaffList.aspx.cs" Inherits="AABFrontOffice.StaffList" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StaffList.aspx.cs" Inherits="AabCars.StaffList" %>
 
 
 

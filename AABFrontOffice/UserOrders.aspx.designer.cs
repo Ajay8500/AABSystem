@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AABFrontOffice {
+namespace AabCars {
     
     
     public partial class UserOrders {

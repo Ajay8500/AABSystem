@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <%--<meta name="author" content="">--%>
 
-    <title>AAB Cars</title>
+    <title>Aab Cars</title>
 
     <!-- Custom fonts for this template-->
     <link href="Assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -143,7 +143,7 @@
                     </button>
 
 
-                    <h6 class="web-heading">AAB Cars - Online Car Purchase</h6>
+                    <h6 class="web-heading">Aab Cars - Online Car Purchase</h6>
 
 
                     <button type="button" class="btn btn-info editprofile" runat="server" onserverclick="_btnEdit_ServerClick">
@@ -209,7 +209,7 @@
     <footer class="sticky-footer">
         <div class="container my-auto">
             <div class="copyright text-center my-auto">
-                <span>Copyright &copy; AAB-Cars</span>
+                <span>Copyright &copy; Aab-Cars</span>
             </div>
         </div>
     </footer>

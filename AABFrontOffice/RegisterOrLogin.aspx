@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegisterOrLogin.aspx.cs" Inherits="AABFrontOffice.RegisterOrLogin" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegisterOrLogin.aspx.cs" Inherits="AabCars.RegisterOrLogin" %>
 
 
 
