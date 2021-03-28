@@ -1,0 +1,365 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AABFrontOffice.Site" %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <%--<meta name="author" content="">--%>
+
+    <title>Aab Cars</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="Assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <%--<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    --%>
+    <link href="Assets/css/sb-admin-2.css" rel="stylesheet">
+    <link href="Assets/css/Style.css" rel="stylesheet">
+    <link href="Assets/css/toastr.css" rel="stylesheet">
+    <link href="Assets/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link href="Assets/css/datatable-bootstrap.css" rel="stylesheet" />
+    <link href="Assets/css/datatable.min.css" rel="stylesheet" />
+    <link href="Assets/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="Assets/css/dropzone.css" rel="stylesheet" />
+    <link href="Assets/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="Assets/css/daterangepicker.css" rel="stylesheet">
+    <link href="Assets/css/jquery-confirm.css" rel="stylesheet" />
+    <link href="Assets/css/Loader.css" rel="stylesheet" />
+
+    <script src="Assets/vendor/jquery/jquery.js"></script>
+    <script src="Assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <link href="Assets/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/spectrum.min.css" />
+    <!-- Custom scripts for all pages-->
+
+    <script src="Assets/js/dropzone.js"></script>
+    <script type="text/javascript">
+        // Immediately after the js include
+        Dropzone.autoDiscover = false;
+    </script>
+
+    <%--<asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>--%>
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+                <div class="sidebar-brand-icon" id="_headerIconDiv" style="margin-top: 20px; margin-bottom: 35px">
+                    <img id="_headerIcon" width="90%" src="Assets/images/alfalah.png" />
+                </div>
+            </a>
+
+            <hr class="sidebar-divider my-0 dividerColor">
+
+
+            <li class="nav-item carList d-none">
+                <a class="nav-link" href="CarList.aspx">
+                    <i class="fas fa-fw fa-plus-circle navBarTextColor"></i>
+                    <span class="navBarTextColor">Car List</span>
+                </a>
+            </li>
+
+            <li class="nav-item orderList d-none">
+                <a class="nav-link" href="UserOrders.aspx">
+                    <i class="fas fa-fw fa-plus-circle navBarTextColor"></i>
+                    <span class="navBarTextColor">Orders</span>
+                </a>
+            </li>
+
+            <li class="nav-item stafforderList d-none">
+                <a class="nav-link" href="StaffOrders.aspx">
+                    <i class="fas fa-fw fa-plus-circle navBarTextColor"></i>
+                    <span class="navBarTextColor">Orders</span>
+                </a>
+            </li>
+
+
+            
+            <li class="nav-item staffList d-none">
+                <a class="nav-link" href="EmployeeList.aspx">
+                    <i class="fas fa-fw fa-plus-circle navBarTextColor"></i>
+                    <span class="navBarTextColor">Staff List</span>
+                </a>
+            </li>
+
+            <li class="nav-item customerList d-none">
+                <a class="nav-link" href="CustomerList.aspx">
+                    <i class="fas fa-fw fa-plus-circle navBarTextColor"></i>
+                    <span class="navBarTextColor">Customer List</span>
+                </a>
+            </li>
+
+            <li class="nav-item home d-none">
+                <a class="nav-link" href="Home.aspx">
+                    <i class="fas fa-fw fa-plus-circle navBarTextColor"></i>
+                    <span class="navBarTextColor">Home</span>
+                </a>
+            </li>
+
+            <li class="nav-item appointments d-none">
+                <a class="nav-link" href="BookedAppointments.aspx">
+                    <i class="fas fa-fw fa-plus-circle navBarTextColor"></i>
+                    <span class="navBarTextColor">Booked Appointments</span>
+                </a>
+            </li>
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0 dividerColor" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+
+                    <h6 class="web-heading">AAB Cars - Online Car Purchase</h6>
+
+
+                    <button type="button" class="btn btn-info editprofile" runat="server" onserverclick="_btnEdit_ServerClick">
+                        Edit Profile
+                    </button>
+
+                    <button type="button" class="btn btn-danger editprofile " id="deleteAccount" runat="server">
+                        Delete Profile
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto editprofile">
+
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="Assets/#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small username"></span>
+                                <img class="img-profile rounded-circle" src="Assets/images/user.png">
+                            </a>
+                            <!-- Dropdown - User Information -->
+
+
+
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#" runat="server" onserverclick="_btnLogOut_ServerClick">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400 _btnLogOut"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+                <form id="form1" runat="server">
+
+                    <section>
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </section>
+
+                </form>
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <footer class="sticky-footer">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; AAB-Cars</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            var name = '';
+            name = '<%=Session["UserName"] %>';
+
+            var userId = '<%=Session["UserId"] %>';
+            // window.location.replace("CreateComplaint.aspx");
+            if (userId == '') {
+                $('.editprofile').addClass('d-none');
+                //window.location.replace("Login.aspx");
+            }
+            $('.username').html('Welcome, ' + name);
+
+            if (name != '') {
+                $('.appointments,.home,.orderList').removeClass('d-none');
+            }
+
+            var isStaff = '<%=Session["isStaff"] %>';
+            console.log(isStaff);
+            if (isStaff != 0) {
+
+                $(".staffList, .carList,.customerList,.stafforderList").removeClass('d-none');
+                $(".home,.orderList").addClass('d-none');
+
+            }
+
+
+
+            $(document).on("click", "#deleteAccount", function () {
+                var EmpId = 0;
+
+                $.confirm({
+                    title: 'Delete!',
+                    icon: 'fa fa-question',
+                    theme: 'modern',
+                    closeIcon: true,
+                    animation: 'scale',
+                    type: 'blue',
+                    buttons: {
+                        yes: function () {
+
+                            var param = {
+                                EmpId: EmpId
+                            }
+
+                            ajaxForInsertAndUpdate("AABCarService.asmx/DeleteAccount", param, "post", false, function (data) {
+                                var response = $.parseJSON($(data).find("boolean").text());
+                                if (response) {
+                                    toastr.success("Employee deleted successfully..")
+                                    window.location.replace("Login.aspx");
+                                }
+                                else {
+                                    toastr.error("Something went wrong.. Please check your internet Connection", "Error")
+                                }
+                            }, null);
+                        },
+                        no: function () {
+
+                        }
+                    }
+                });
+
+            })
+
+<%--            role = '<%=Session["Roles"] %>';
+            // window.location.replace("CreateComplaint.aspx");
+            if (role == 'Helpline Representative' || role == 'Supervisor' || role == 'Manager' || role == 'Head of Department' || role == 'Unit Head') {
+                window.location.replace("CreateComplaint.aspx");
+            }--%>
+
+            //if (role == 'Helpline Representative' || role == 'Supervisor' || role == 'Manager' || role == 'Head of Department' || role == 'Unit Head') {
+            //    $(".dashBoard").addClass('d-none');
+            //    $(".vendorList").addClass('d-none'); 
+            //    $(".staffList").addClass('d-none');
+            //    $(".BranchList").addClass('d-none');
+
+            //    //$(".dashBoard, .vendorList, .staffList, .BranchList").removeClass('d-none');
+            //}
+            //else if(role == "Admin"){
+            //    $(".dashBoard, .vendorList, .staffList, .BranchList, .addCategory").removeClass('d-none');
+            //}
+            //console.log(ShowDashboard);
+            //if (ShowDashboard != 'False') {
+
+            //    $(".dashBoard").removeClass('d-none');
+            //}
+
+
+            $(".numbersOnly").keypress(function (e) {
+                //if the letter is not digit then display error and don't type anything
+                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                    //display error message
+                    $("#errmsg").html("Digits Only").show().fadeOut("slow");
+                    return false;
+                }
+            });
+
+        });
+    </script>
+
+    <script src="Assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="Assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="Assets/js/sb-admin-2.js"></script>
+    <script src="Assets/js/ajaxCall.js"></script>
+    <script src="Assets/js/toastr.js"></script>
+    <script src="Assets/js/lodash.js"></script>
+    <script src="Assets/js/jquery.validate.min.js"></script>
+    <script src="Assets/js/moment.js"></script>
+    <script src="Assets/js/bootstrap-toggle.min.js"></script>
+
+    <script src="Assets/js/core.js"></script>
+    <script src="Assets/js/charts.js"></script>
+    <script src="Assets/js/dataviz.js"></script>
+    <script src="Assets/js/animated.js"></script>
+
+    <script src="Assets/js/dataTable.js"></script>
+    <script src="Assets/js/dataTables.bootstrap.min.js"></script>
+    <script src="Assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="Assets/js/dataTables.responsive.min.js"></script>
+    <script src="Assets/js/dataTables.buttons.min.js"></script>
+    <script src="Assets/js/buttons.html5.min.js"></script>
+    <script src="Assets/js/jszip.min.js"></script>
+
+
+
+    <script src="Assets/js/url-parser.js"></script>
+    <script src="Assets/js/daterangepicker.js"></script>
+    <script src="Assets/js/jquery-confirm.js"></script>
+    <script src="assets/js/spectrum.min.js"></script>
+
+    <script src="Assets/js/HighCharts.js"></script>
+    <script src="Assets/js/highcharts-3d.js"></script>
+    <script src="Assets/js/exporting.js"></script>
+    <script src="Assets/js/export-data.js"></script>
+    <script src="Assets/js/accessibility.js"></script>
+
+    <script src="Assets/js/jquery.daterange.js"></script>
+    <script src="Assets/js/jquery-ui.min.js"></script>
+
+    <script src="Assets/js/loadingoverlay.js"></script>
+    <script src="Assets/js/CustomLoader.js"></script>
+
+</body>
+
+<script type="text/javascript">// Immediately after the js include
+    Dropzone.autoDiscover = false;
+</script>
+
+</html>
