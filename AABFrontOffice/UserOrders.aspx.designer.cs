@@ -7,11 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AabCars
-{
-
-
-    public partial class UserOrders
-    {
+namespace AABFrontOffice {
+    
+    
+    public partial class UserOrders {
     }
 }

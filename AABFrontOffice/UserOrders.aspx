@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UserOrders.aspx.cs" Inherits="AabCars.UserOrders" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UserOrders.aspx.cs" Inherits="AABFrontOffice.UserOrders" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     
@@ -32,7 +32,7 @@
 
             var isStaff = '<%=Session["isStaff"] %>';
         function getAllCars() {
-            ajaxFunction("AabCarService.asmx/GetOrders", { ticketStatus: "Total" }, "xml", "post", false, function (data) {
+            ajaxFunction("AABCarService.asmx/GetOrders", { ticketStatus: "Total" }, "xml", "post", false, function (data) {
                 var jsonData = $.parseJSON($(data).find("string").text());
                 $("#_orderList").dataTable().fnClearTable();
                 $("#_orderList").dataTable().fnDestroy();
