@@ -2064,6 +2064,7 @@
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="RegisterOrLogin.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -2130,6 +2131,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
