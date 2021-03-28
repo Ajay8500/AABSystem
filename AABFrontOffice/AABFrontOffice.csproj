@@ -190,6 +190,8 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Classes\DAL.cs" />
+    <Compile Include="Classes\UserDetails.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
