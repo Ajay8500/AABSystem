@@ -2098,6 +2098,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="StaffList.aspx" />
     <Content Include="StaffOrders.aspx" />
     <Content Include="UserOrders.aspx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -2189,6 +2190,12 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StaffList.aspx.cs">
+      <DependentUpon>StaffList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffList.aspx.designer.cs">
+      <DependentUpon>StaffList.aspx</DependentUpon>
     </Compile>
     <Compile Include="StaffOrders.aspx.cs">
       <DependentUpon>StaffOrders.aspx</DependentUpon>
