@@ -1882,6 +1882,7 @@
     <Content Include="Assets\vendor\jquery\jquery.min.js" />
     <Content Include="Assets\vendor\jquery\jquery.slim.js" />
     <Content Include="Assets\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="BookedAppointments.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -2109,6 +2110,13 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BookedAppointments.aspx.cs">
+      <DependentUpon>BookedAppointments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookedAppointments.aspx.designer.cs">
+      <DependentUpon>BookedAppointments.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Classes\DAL.cs" />
     <Compile Include="Classes\UserDetails.cs" />
     <Compile Include="CustomerList.aspx.cs">
