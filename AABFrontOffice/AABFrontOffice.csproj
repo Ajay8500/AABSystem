@@ -139,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AABCarService.asmx" />
+    <Content Include="About.aspx" />
     <Content Include="AddCar.aspx" />
     <Content Include="AddorUpdateEmp.aspx" />
     <Content Include="Assets\css\all.css" />
@@ -2108,6 +2109,13 @@
     <Compile Include="AABCarService.asmx.cs">
       <DependentUpon>AABCarService.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddCar.aspx.cs">
       <DependentUpon>AddCar.aspx</DependentUpon>

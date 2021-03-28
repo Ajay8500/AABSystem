@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace AabCars
+namespace AABFrontOffice
 {
     public partial class AddCar : System.Web.UI.Page
     {

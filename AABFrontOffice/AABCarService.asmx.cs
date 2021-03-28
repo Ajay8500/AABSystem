@@ -20,7 +20,7 @@ namespace AABFrontOffice
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     // [System.Web.Script.Services.ScriptService]
-    public class AabCarService : System.Web.Services.WebService
+    public class AABCarService : System.Web.Services.WebService
     {
         public static string cs = ConfigurationManager.ConnectionStrings["AABFrontOffice"].ConnectionString;
         [WebMethod]
