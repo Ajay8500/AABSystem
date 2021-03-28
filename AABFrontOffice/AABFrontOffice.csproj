@@ -139,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AABCarService.asmx" />
+    <Content Include="AddCar.aspx" />
     <Content Include="Assets\css\all.css" />
     <Content Include="Assets\css\bootstrap-theme.css" />
     <Content Include="Assets\css\bootstrap-theme.min.css" />
@@ -1890,6 +1891,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\Site.css" />
+    <Content Include="favicon.ico" />
     <Content Include="Fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Fonts\glyphicons-halflings-regular.woff" />
@@ -2056,6 +2058,7 @@
     <Content Include="Assets\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
     <Content Include="Assets\vendor\jquery\jquery.min.map" />
     <Content Include="Assets\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Bundle.config" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -2096,6 +2099,12 @@
     <Compile Include="AABCarService.asmx.cs">
       <DependentUpon>AABCarService.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AddCar.aspx.cs">
+      <DependentUpon>AddCar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddCar.aspx.designer.cs">
+      <DependentUpon>AddCar.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
