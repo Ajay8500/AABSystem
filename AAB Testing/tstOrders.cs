@@ -35,7 +35,7 @@ namespace AAB_Testing
             //create an instance of the class we want to create
             clsOrder AOrder = new clsOrder();
             //create some test data to assign to the property
-            string TestData = "Le4";
+            string TestData = "LE2";
             //assign the data to the property
             AOrder.OrderPostCode = TestData;
             //test to see that the two values are the same
@@ -47,7 +47,7 @@ namespace AAB_Testing
             //create an instance of the class we want to create
             clsOrder AOrder = new clsOrder();
             //create some test data to assign to the property
-            string TestData = "Le4";
+            string TestData = "LE2";
             //assign the data to the property
             AOrder.OrderHouseNo = TestData;
             //test to see that the two values are the same
@@ -60,7 +60,7 @@ namespace AAB_Testing
             //create an instance of the class we want to create
             clsOrder AOrder = new clsOrder();
             //create some test data to assign to the property
-            string TestData = "John Wick";
+            string TestData = "Baijeed Chowdhury";
             //assign the data to the property
             AOrder.CustomerName = TestData;
             //test to see that the two values are the same
@@ -73,7 +73,7 @@ namespace AAB_Testing
             //create an instance of the class we want to create
             clsOrder AOrder = new clsOrder();
             //create some test data to assign to the property
-            string TestData = "Nike";
+            string TestData = "Mercedes";
             //assign the data to the property
             AOrder.OrderItem = TestData;
             //test to see that the two values are the same
@@ -156,7 +156,7 @@ namespace AAB_Testing
             //invoke the method
             Found = AOrder.Find(OrderID);
             //check the OrderNo
-            if (AOrder.OrderDate != Convert.ToDateTime("16/09/2015"))
+            if (AOrder.OrderDate != Convert.ToDateTime("28/03/2021"))
             {
                 Ok = false;
             }
@@ -177,7 +177,7 @@ namespace AAB_Testing
             //invoke the method
             Found = AOrder.Find(OrderID);
             //check the property
-            if (AOrder.OrderPostCode != "Le35ee")
+            if (AOrder.OrderPostCode != "LE2 3NF")
             {
                 OK = false;
             }
@@ -198,7 +198,7 @@ namespace AAB_Testing
             //invoke the method
             Found = AOrder.Find(OrderID);
             //check the property
-            if (AOrder.OrderHouseNo != "26a")
+            if (AOrder.OrderHouseNo != "103")
             {
                 OK = false;
             }
@@ -219,7 +219,7 @@ namespace AAB_Testing
             //invoke the method
             Found = AOrder.Find(OrderID);
             //check the property
-            if (AOrder.CustomerName != "John Wick")
+            if (AOrder.CustomerName != "Baijeed Chowdhury")
             {
                 OK = false;
             }
@@ -240,7 +240,7 @@ namespace AAB_Testing
             //invoke the method
             Found = AOrder.Find(OrderID);
             //check the property
-            if (AOrder.OrderItem != "Nike")
+            if (AOrder.OrderItem != "Mercedes")
             {
                 OK = false;
             }
