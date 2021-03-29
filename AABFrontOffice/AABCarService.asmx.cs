@@ -22,7 +22,7 @@ namespace AABFrontOffice
     // [System.Web.Script.Services.ScriptService]
     public class AABCarService : System.Web.Services.WebService
     {
-        public static string cs = ConfigurationManager.ConnectionStrings["AabCars"].ConnectionString;
+        public static string cs = ConfigurationManager.ConnectionStrings["AABFrontOffice"].ConnectionString;
         [WebMethod]
         public string HelloWorld()
         {
