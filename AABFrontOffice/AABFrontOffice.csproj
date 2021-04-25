@@ -1890,6 +1890,7 @@
     <Content Include="Assets\vendor\jquery\jquery.slim.js" />
     <Content Include="Assets\vendor\jquery\jquery.slim.min.js" />
     <Content Include="BookedAppointments.aspx" />
+    <Content Include="CarList.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -2148,6 +2149,13 @@
     </Compile>
     <Compile Include="BookedAppointments.aspx.designer.cs">
       <DependentUpon>BookedAppointments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CarList.aspx.cs">
+      <DependentUpon>CarList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CarList.aspx.designer.cs">
+      <DependentUpon>CarList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Classes\DAL.cs" />
     <Compile Include="Classes\UserDetails.cs" />
