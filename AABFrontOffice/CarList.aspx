@@ -62,7 +62,7 @@
             $(".carList").addClass("active")
 
             function getAllCars() {
-                ajaxFunction("AabCarService.asmx/GetAllCars", { ticketStatus: "Total" }, "xml", "post", false, function (data) {
+                ajaxFunction("AABCarService.asmx/GetAllCars", { ticketStatus: "Total" }, "xml", "post", false, function (data) {
                     var jsonData = $.parseJSON($(data).find("string").text());
                     $("#_carList").dataTable().fnClearTable();
                     $("#_carList").dataTable().fnDestroy();
@@ -173,7 +173,7 @@
                                 carId: carId
                             }
 
-                            ajaxForInsertAndUpdate("AabCarService.asmx/DeleteCar", param, "post", false, function (data) {
+                            ajaxForInsertAndUpdate("AABCarService.asmx/DeleteCar", param, "post", false, function (data) {
                                 var response = $.parseJSON($(data).find("boolean").text());
                                 if (response) {
                                     toastr.success("Car deleted successfully..")
